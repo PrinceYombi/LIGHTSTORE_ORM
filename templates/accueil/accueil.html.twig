@@ -1,0 +1,44 @@
+{% extends "base.html.twig" %}
+
+    {% block body %}
+        {% if customer %}
+            <h1 class="text-center">BIENVENUE DANS LA BOUTIQUE LIGHTSTORE</h1>
+            <div class="">
+                <div class="">
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
+                of Lorem Ipsum.
+                </div>
+            </div>
+        {% else %}
+            <div class="bg-white shadow-sm rounded p-6 my-3">
+                <form action="/inscription" method="GET">
+                <div class="mb-4">
+                    <h2 class="h4">INSCRIPTION</h2>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group input-group form">
+                        <input type="text" name="pseudo"  class="form-control" required="" placeholder="Entrer votre Pseudo" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group input-group form">
+                    <input type="email" class="form-control" name="email" required placeholder="Entrer votre adresse email"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group input-group form">
+                    <input type="password" class="form-control" name="password"  required placeholder="Entrer votre mot de passe"/>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary col-12">S'inscrire</button>
+                </form>
+            </div>
+        {% endif %}
+    {% endblock %}
+
+
+

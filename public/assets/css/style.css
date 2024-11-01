@@ -1,0 +1,47 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.container{
+    min-height: 100vh;
+}
+
+
+
+/*******FOOTER*************/
+footer{
+    height: 300px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+footer .title{
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+footer .icons{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin-bottom: 20px;
+}
+footer .icons i{
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+footer .icons .email p{
+    color: blue;
+}
+footer p.copyright{
+    color: #ccc;
+    font-size: 1.2rem;
+
+}
+footer p.copyright span{
+    color: blue;
+}

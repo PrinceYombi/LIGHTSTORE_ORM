@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+    {% block body %}
+       {% if customer %}
+        <ul class="list-group my-3">
+            <li class="list-group-item active" aria-current="true">Bienvenu sur votre profil {{customer[2]}} </li>
+            <li class="list-group-item">Sexe :  {{customer[1]}}</li>
+            <li class="list-group-item">Pseudo :  {{customer[2]}}</li>
+            <li class="list-group-item">Nom  (s) et Prénom (s) :  {{customer[3]}}</li>
+            <li class="list-group-item">Telephone :  {{customer[6]}}</li>
+            <li class="list-group-item">Email :  {{customer[7]}}</li>
+            <li class="list-group-item">Adresse Facturation :  {{customer[4]}}</li>
+            <li class="list-group-item">Adresse Livraison :  {{customer[5]}}</li>
+        </ul>
+        <div class="mt-3">
+        <a href="/miseAjour" class="btn btn-block btn-success">Mettre à jour mes données</a>
+        </div>
+       {% endif %}
+    {% endblock%}

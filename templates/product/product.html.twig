@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+    {% block body %}
+        {% if category %}
+            <h1>Produits de la categorie : {{category.name}}</h1>
+        {% else %}
+            <h1>Tous les produits</h1>
+        {% endif %}
+        {% for product in products %}
+            <div class="card my-3 mx-3" style=display:inline-block;width:300px;> 
+                <img src="/assets/image/{{product.imageUrl}}" alt="" style=width:100%;>
+                <div class="card-body">
+                    <h5 class="card-title"> {{product.name}} </h5>
+                    <a href="/detail/{{product.id}}" class="btn btn-primary">Details</a>
+                    <a href="/panier/{{product.id}}" class="btn btn-success">Acheter</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% endblock%}

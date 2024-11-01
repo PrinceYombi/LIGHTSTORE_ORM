@@ -1,0 +1,14 @@
+        ------ FONCTIONNEMENT DE L'APPLICATION ----------
+
+        - Au niveau du terminal, lancer php bin/loader pour creer la base de donnée et le fonctionnement de l'app
+
+        - Au niveau du terminal, php bin/server vous permettra de lancer l'APPLICATION
+
+        - Une page des produits s'affiche, vous pouvez voir les details d'un produit, l'ajouter au panier d'achat
+
+        - Pour effectuer un achat vous devez vous inscrire ou vous connecter si vous avez un compte
+
+
+
+
+

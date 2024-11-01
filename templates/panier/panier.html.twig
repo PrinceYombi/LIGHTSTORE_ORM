@@ -1,0 +1,61 @@
+{% extends "base.html.twig" %}
+
+    {% block body %}
+       {% if products%}
+       <table class="table caption-top">
+            <thead class=" bg-dark text-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Quantité</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                    <tr>
+                        <th scope="row">{{product[0]}}</th>
+                        <td>{{product[1]}}</td>
+                        <td>{{product[2]}}</td>
+                        <td><img src="/assets/image/{{product[4]}}" alt=""></td>
+                        <td>{{product[3]}} €</td>
+                        <td>1</td>
+                    </tr> 
+                {% endfor %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Prix total (HT)</td>
+                        <td>{{total_price}} €</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Tva ({{TVA}} %)</td>
+                        <td>{{total_tva}} €</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Total (TTC)</td>
+                        <td>{{total_ttc}} €</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+        </table>
+        {% if customer %}
+            <a href="/valider" class="btn btn-block btn-success d-block mb-3">Validez ma commande</a>
+        {% else %}
+        <a href="/" class="btn btn-block btn-primary d-block mb-3">Pour effectuer des achats, veuillez vous connecter svp..</a>
+        {% endif %}
+       {% else %}
+            <h1>Votre panier est vide !</h1>
+       {% endif %}
+    {% endblock%}

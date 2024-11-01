@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+    {% block body %}
+       {% if customer %}
+       <form action="update" method="GET">
+        <div class="form-row row my-3">
+            <div class="form-group col-md-3">
+                <label for="inputFirstname">Sexe : </label><br/>
+                <select name="sexe" class="form-control"> 
+                <option value="Masculin">Masculin</option> 
+                <option value="Feminin">Féminin</option>  
+                </select> 
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputFirstname">Pseudo : </label><br />
+                <input type="text" name="pseudo" value="{{customer[2]}}" class="form-control" id="" />
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputName">Nom (s) et Prénom (s) : </label><br />
+                <input type="text" name="full_name" vamue="{{customer[3]}}" class="form-control" id="" required />
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputEmail">Email</label><br />
+                <input type="email" name="email" value="{{customer[7]}}" class="form-control" id="" />
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputTelephone">Télephone : </label><br />
+                <input type="text" name="telephone" value="{{customer[4]}}" class="form-control"  />
+            </div>
+        </div>
+        <div class="form-row row">
+            <div class="form-group col-md-6">
+                <label for="">Adresse de Facturation : </label><br />
+                <input type="text" name="adresse_facturation" value="{{customer[5]}}" class="form-control" id="" />
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputName">Adresse de Livraison : </label><br />
+                <input type="text" name="adresse_livraison" value="{{customer[6]}}" class="form-control" id="" required />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Mettre à jour</button>
+        </form> 
+ 
+       {% endif %}
+    {% endblock%}
